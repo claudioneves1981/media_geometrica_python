@@ -1,17 +1,18 @@
 import math
 
-qtdnotas = int(input('Digite um número: '))
 
 nota = []
 multiplicanotas = 1
-
-for i in range(0, qtdnotas):
-    	nota.append(int(input('Digite nota: ')))
+entrada = 0
+while entrada != '!':
+    	entrada  = input('Digite nota: ')
+    	if entrada != '!':
+    		nota.append(int(entrada))
+    	
     		
-for x in range(0, qtdnotas):
+for x in range(0, len(nota)):
 	multiplicanotas = multiplicanotas*nota[x]
 
-
 		
-media = math.pow(multiplicanotas, (1/qtdnotas))
+media = math.pow(multiplicanotas, (1/len(nota)))
 print(media)
